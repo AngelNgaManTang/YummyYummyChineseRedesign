@@ -49,17 +49,35 @@
     color: var(--clr-accent);
 }
 
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 2px;
+  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  flex: 100%;
+  max-width: 100%;
+}
+
+.column img {
+  vertical-align: middle;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+}
+
 .image {
   display: block;
   width: 100%;
   height: auto;
 }
-.image_container {
-  position: relative;
-  width: 100%;
-}
-.image_overlay {
-  
+.overlay {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -68,49 +86,57 @@
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
-  
+  transition: 0.5s ease;
+  background-color: black;
 }
 
-.image:hover{
-  opacity: 0.1;
-}
-
-.image_overlay:hover{
-  opacity: 1;
+.container:hover .overlay {
+  opacity: 0.8;
 }
 
 .text {
-  color: black;
-  font-size: var(--fs-h3);
+  color: var(--clr-light);
+  font-size: var(--fs-h5);
   position: absolute;
-  font-family: var(--ff-secondary);
-  top: 25%;
+  top: 30%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
-
-.small_text {
-  color: black;
+.small_text_hours{
+  color: var(--clr-light);
+  font-size: var(--fs-body);
+  position: absolute;
+  top: 60%;
+  left: 45%;
+  transform: translate(-70%, -50%);
+  -ms-transform: translate(-70%, -50%);
+  text-align: left;
+}
+.small_text{
+  color: var(--clr-light);
   font-size: var(--fs-h6);
   position: absolute;
-  font-family: var(--ff-secondary);
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   text-align: center;
 }
+/* Tablet Styles */
+@media only screen and (min-width: 481px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+}
 
-@media (min-width: 1000px){
-  .section_main_select{
-      padding: 1em;
-      justify-content: center;
-      display: flex;
-  }
-  
+
+/* Desktop Styles */
+@media only screen and (min-width: 1024px) {
+    .column {
+      flex: 25%;
+      max-width: 25%;
+    }
 }
