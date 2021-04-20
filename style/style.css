@@ -1,6 +1,4 @@
 /*Custom Properties*/
-
-
 :root{
     --ff-title:'Kumbh Sans', sans-serif;
     --ff-body: 'Open Sans Condensed', sans-serif;
@@ -21,6 +19,10 @@
 
     --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
     0.125em 0.125em 0.25em rgba(0,0,0,.15);
+}
+
+body{
+  font-size: var(--fs-h5);
 }
 
 .logo{
@@ -194,11 +196,10 @@
 }
 
 .mu-restaurant-menu li a {
-  font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  
   border-radius: 0;
   color: #ff7800;
-  font-size: 18px;
+  
   margin: 0 15px;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -262,7 +263,7 @@
 }
 
 .mu-menu-item-nav li .media .media-body .media-heading {
-  font-size: 20px;
+  
   margin-bottom: 10px;
 }
 
@@ -275,7 +276,7 @@
 }
 
 .mu-menu-item-nav li .media .media-body .mu-menu-price {
-  font-size: 16px;
+  
   font-weight: bold;
   letter-spacing: 1.5px;
   line-height: 20px;
@@ -283,5 +284,5 @@
 
 .mu-menu-item-nav li .media .media-body p {
   margin-top: 10px;
-  font-size: 14px;
+  
 }
